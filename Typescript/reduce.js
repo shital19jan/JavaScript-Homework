@@ -151,21 +151,6 @@ const employees = [
  { name:"E", dept:"HR" }
 ];
 
-// function countEmployee(){
-//     // const count:number=0;
-
-//     const employeeCount=employees.reduce((acc:any,currentEmp:any)=>{
-// if(acc[currentEmp.dept]){
-//     acc[currentEmp.dept]= {count:0,employees:[]}
-// }
-// acc[currentEmp.dept].count +=1;
-// acc[currentEmp.dept].employees.push(currentEmp.name);
-// return acc;
-
-//     },{count:Number, employees:[]})
-//     console.log(employeeCount);
-// }
-// countEmployee()
 
  const empCount=employees.reduce((acc,emp)=>{
   if(acc[emp.dept]){
