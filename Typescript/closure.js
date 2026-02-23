@@ -7,9 +7,8 @@ function outer() {
 }
 const printMsg = outer();
 console.log(printMsg);
+// =============================================================
 
-// 2.Create a function createGreeter(name) that returns another function.
-//  When called, it should greet the saved name.
 function createGreeter(name) {
     function greetfun() {
         console.log("hello", name);
@@ -36,9 +35,9 @@ function createCounter() {
     return innerCount;
 }
 const countresult = createCounter();
-countresult();
-countresult();
-countresult();
+countresult();  //1
+countresult();  // 2 
+countresult();  //3
 
 
 // 4.Create two counters using your function.
@@ -63,16 +62,16 @@ innerfun();
 
 
 function createBankAccount(initialBalance) {
-    let balance=initialBalance;
-    console.log("initial balance is:",initialBalance)
+    let balance = initialBalance;
+    console.log("initial balance is:", initialBalance)
     function deposit(amount) {
-        balance+=amount;
-        console.log("deposit amount",amount,"total balance is:", balance)
+        balance += amount;
+        console.log("deposit amount", amount, "total balance is:", balance)
         function withdraw(amount) {
-          balance -=amount;
-            console.log("withdraw amount", amount ,"and balance is:",balance)
+            balance -= amount;
+            console.log("withdraw amount", amount, "and balance is:", balance)
             function getBalance() {
-return balance;
+                return balance;
 
             }
             return getBalance;

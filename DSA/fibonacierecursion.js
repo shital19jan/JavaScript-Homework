@@ -19,18 +19,17 @@ function fibonacci(n){
 const  fibser=fibonacci(10)
 console.log(fibser)
 
+// ========================================================
 
-// function fibonacci1(n){
-//         if(n<=0){
-//             return("input Positive")
-//         }else if(n===1){
-//             return 0;
-//         }else if(n===2){
-// return 1;
-//         }else{
-//             return fibonacci1(n-1)+fibonacci1(n-2);
-//         }
-// }
-// for(let i=0;i<10;i++){
-//     console.log(fibonacci1(i));
-// }
+function fib(n){
+    if(n==0){
+        return 0;
+    }else if(n==1){
+        return 1;
+    }
+    return  fib(n-1)+fib(n-2);
+}
+// fib(6);
+const result=fib(6);
+console.log(result);
+

@@ -115,5 +115,5 @@ let obj = {
 // const copiedObj=structuredClone(obj)
 const copiedObj=JSON.parse(JSON.stringify(obj));
 copiedObj.nested.value= 20;
-console.log("obj",obj);
-console.log("copiedObj",copiedObj)
+console.log("obj",obj);  //10 
+console.log("copiedObj",copiedObj)  //20
