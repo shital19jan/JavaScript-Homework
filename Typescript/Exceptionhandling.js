@@ -127,17 +127,7 @@ nestedCatch('{data="john"}');
 // ================================================================================
 
 
-// function fetchData(success){
-//   try{
-//     if(!success){
-//       throw new error("API failed")
-//     }
-//   }
-//   catch(e){
-//     console.log("handle error",e.message)
-//   }
-// }
-// fetchData("true")
+
 
 
 function fetchData(success) {
@@ -190,3 +180,24 @@ console.log(withdraw("abc", 200));
 
 
 
+// ===========================================================================
+// Write logic that retries a risky function 3 times using try...catch.
+// If still fails → print "All retries failed".
+
+
+function riskyfun(){
+  throw new error("error occure!")
+}
+  let retries=3;
+  for(let i=1; i<=retries;i++){
+    try{
+      riskyfun();
+      console.log("success")
+      break;    //stop if get result
+    }catch(e){
+      if(i==retries)
+      console.error("All retries failed")
+    }
+
+    }
+  

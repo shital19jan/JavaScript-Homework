@@ -45,19 +45,18 @@ countresult();  //3
 function outerCount() {
     let count = 0;
     function childCount() {
-        let innerCounter = 0;
+        
         count++;
-        console.log("counter of outerCount", count);
-        innerCounter++;
-        console.log(innerCounter)
+        console.log( count);
     }
     return childCount;
 }
-const innerfun = outerCount();
-innerfun();
-innerfun();
-innerfun();
-innerfun();
+const counter1 = outerCount();
+const counter2=outerCount()
+counter1();
+counter1();
+counter2();
+counter1();
 // =========================================================================================
 
 
