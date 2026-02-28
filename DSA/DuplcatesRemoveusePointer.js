@@ -4,6 +4,7 @@ console.log(removeDuplicates);
 
 
 
-const head=[1,1,2,3,3];
+const arr=[1,1,2,3,3];
 const uniquehead=[...new Set(head)];
 console.log(uniquehead)
+
